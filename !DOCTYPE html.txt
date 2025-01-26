@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lakshmi Threads</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Lakshmi Threads</h1>
+    <p>Tassels Touched by Lakshmi</p>
+    <p>Email: lakshmithreads@example.com | Phone: +91 9876543210</p>
+  </header>
+  <section class="gallery">
+    <div class="product">
+      <img src="image1.jpg" alt="Tassel Saree 1">
+      <button onclick="addToCart('Tassel Saree 1', 3000)">Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="image2.jpg" alt="Tassel Saree 2">
+      <button onclick="addToCart('Tassel Saree 2', 3500)">Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="image3.jpg" alt="Tassel Saree 3">
+      <button onclick="addToCart('Tassel Saree 3', 4000)">Add to Cart</button>
+    </div>
+  </section>
+  <section class="cart">
+    <h2>Cart</h2>
+    <div id="cart-items">
+      <p>Your cart is empty.</p>
+    </div>
+    <p id="total-price"></p>
+  </section>
+</body>
+</html>

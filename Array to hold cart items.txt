@@ -1,0 +1,35 @@
+// Array to hold cart items
+let cart = [];
+
+// Function to add items to the cart
+function addToCart(itemName, itemPrice) {
+  // Add item to the cart array
+  cart.push({ name: itemName, price: itemPrice });
+
+  // Update the cart display
+  updateCart();
+}
+
+// Function to update the cart display
+function updateCart() {
+  const cartItemsContainer = document.getElementById('cart-items');
+  const totalPriceContainer = document.getElementById('total-price');
+
+  if (cart.length === 0) {
+    cartItemsContainer.innerHTML = '<p>Your cart is empty.</p>';
+    totalPriceContainer.textContent = '';
+    return;
+  }
+
+  // Generate cart items list
+  let cartHTML = '';
+  let totalPrice = 0;
+
+  cart.forEach((item, index) => {
+    cartHTML += `<p>${index + 1}. ${item.name} - ₹${item.price}</p>`;
+    totalPrice += item.price;
+  });
+
+  cartItemsContainer.innerHTML = cartHTML;
+  totalPriceContainer.textContent = `Total: ₹${totalPrice}`;
+}
